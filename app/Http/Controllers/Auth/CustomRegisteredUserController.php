@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Http\Controllers\RegisteredUserController as FortifyRegisteredUserController;
-
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Str;
 use Laravel\Fortify\Contracts\CreatesNewUsers;

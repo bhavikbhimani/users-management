@@ -31,7 +31,7 @@ class ChatController extends Controller
 
         $data = [
             'message' => $request->message,
-            'user' => auth()->user()->name // Assuming you have user authentication
+            'user' => auth()->user()->name
         ];
         
         $pusher->trigger('chat-channel', 'chat-event', $data);
