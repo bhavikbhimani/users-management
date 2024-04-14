@@ -69,7 +69,7 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 @if ($user->is_send_friend_request == 'accepted')
-                                <form action="{{ route('users.chat', $user) }}" method="POST" class="inline">
+                                <form action="{{ route('chatify.chat', ['userId' => $user->id]) }}" method="POST" class="inline">
                                     @csrf
                                     <button style="background-color: lightblue;" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Chat Now</button>
                                 </form>

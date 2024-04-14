@@ -34,9 +34,5 @@ Route::middleware('auth','web')->group(function () {
     Route::get('/friend-requests', [UserController::class, 'getReceivedRequestList'])->name('friend-request.all');
     Route::post('/friend-requests/{request}/accept', [UserController::class, 'accept'])->name('friend-requests.accept');
     Route::post('/friend-requests/{request}/reject', [UserController::class, 'reject'])->name('friend-requests.reject');
-    //Route::post('/users/{user}/chat', [UserController::class, 'chatWithUser'])->name('users.chat');
-
-    Route::post('/users/{user}/chat', [ChatController::class, 'index'])->name('users.chat');
-    Route::post('/send-message', [ChatController::class, 'sendMessage']);
-
+    Route::post('chatify/{userId}', [ChatController::class, 'index'])->name('chatify.chat');
 });
